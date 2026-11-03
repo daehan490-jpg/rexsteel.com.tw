@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>技術資料 | REXSTEEL Taiwan</title>
+<meta name="description" content="管徑別適用範圍、覆土深度查詢、設計條件與規範對照。">
+<link rel="icon" href="assets/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;700;900&family=Noto+Sans+KR:wght@400;500;700;900&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hdr"><div class="wrap">
+<a class="brand" href="index.html" aria-label="雷克斯波形鋼鐵 首頁"><img src="assets/logo-jv.png" alt="JL / REXSTEEL 雷克斯波形鋼鐵股份有限公司" width="900" height="188"></a>
+<button class="burger" aria-label="Menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+<nav class="menu" id="menu"><a href="about.html"><span class="tc">關於我們</span><span class="en">About</span><span class="ko">회사소개</span></a><a href="products.html"><span class="tc">波形鋼管</span><span class="en">Pipe</span><span class="ko">파형강관</span></a><a href="plate.html"><span class="tc">波形鋼板</span><span class="en">Plate</span><span class="ko">파형강판</span></a><a href="has.html"><span class="tc">機堡 HAS·HAAS</span><span class="en">HAS · HAAS</span><span class="ko">격납고 HAS·HAAS</span></a><a href="engineering.html"><span class="tc">工程技術</span><span class="en">Engineering</span><span class="ko">엔지니어링</span></a><a href="technical.html" aria-current="page"><span class="tc">技術資料</span><span class="en">Technical</span><span class="ko">기술자료</span></a><a href="projects.html"><span class="tc">實績</span><span class="en">Projects</span><span class="ko">실적</span></a><a href="contact.html"><span class="tc">聯絡</span><span class="en">Contact</span><span class="ko">연락처</span></a></nav>
+<div class="lang" role="group" aria-label="Language"><button data-lang="zh-Hant" aria-pressed="true">中文</button><button data-lang="en" aria-pressed="false">EN</button><button data-lang="ko" aria-pressed="false">한국어</button></div>
+</div></header>
+<main>
+<div class="phero">
+  <div class="bgimg" style="background-image:url(assets/install-trench.jpg)"></div>
+  <div class="wrap">
+    <div class="crumb"><a href="index.html"><span class="tc">首頁</span><span class="en">Home</span><span class="ko">홈</span></a> / <span class="tc">技術資料</span><span class="en">Technical</span><span class="ko">기술자료</span></div>
+    <h1><span class="tc">技術資料</span><span class="en">Technical data</span><span class="ko">기술자료</span></h1>
+    <p><span class="tc">0RS 螺旋波形鋼管 (波距 38 mm × 波深 6.5 mm) 依 ASTM A796 及 AASHTO 結構設計方法，採用台灣《公路橋梁設計規範》之設計卡車載重及鐵路 Cooper E80 載重，檢核各管徑之最小覆土及最大填土高度。</span><span class="en">0RS helical pipe (38 × 6.5 mm) checked by the ASTM A796 / AASHTO method for minimum cover and maximum fill under Taiwan highway design trucks and Cooper E80 rail loading.</span><span class="ko">0RS 나선형 파형강관(피치 38 mm × 깊이 6.5 mm)을 ASTM A796·AASHTO 구조설계법에 따라, 대만 「도로교량설계규범」 설계트럭 하중과 철도 Cooper E80 하중으로 관경별 최소토피와 최대성토고를 검토했습니다.</span></p>
+  </div>
+</div>
+<nav class="subnav" aria-label="Technical"><div class="wrap">
+  <a href="#calc"><span class="tc">覆土深度查詢</span><span class="en">Cover check</span><span class="ko">토피 깊이 조회</span></a><a href="#loads"><span class="tc">設計載重</span><span class="en">Loads</span><span class="ko">설계 하중</span></a><a href="#table"><span class="tc">管徑別適用範圍</span><span class="en">Cover table</span><span class="ko">관경별 적용범위</span></a><a href="#basis"><span class="tc">設計條件</span><span class="en">Design basis</span><span class="ko">설계 조건</span></a><a href="#standards"><span class="tc">規範對照</span><span class="en">Standards</span><span class="ko">규범 대조</span></a><a href="#software">REX-CSP</a>
+</div></nav>
+
+<section id="calc">
+  <div class="wrap">
+    <div class="head-row">
+      <div><span class="eyebrow"><span class="tc">覆土深度查詢</span><span class="en">Cover depth check</span><span class="ko">토피 깊이 조회</span></span><h2 class="h2"><span class="tc">選擇條件，立即判定</span><span class="en">Set the conditions, get the answer</span><span class="ko">조건을 고르면 바로 판정</span></h2></div>
+      <p class="lead"><span class="tc">依型錄「覆土深度及管體性能表」查表。拖動覆土即可看到埋設斷面隨之變化。</span><span class="en">Looks up the catalogue cover table. Drag the cover depth and the burial section redraws.</span><span class="ko">카탈로그 「토피 깊이 및 관체 성능표」로 조회합니다. 토피를 끌면 매설 단면이 함께 바뀝니다.</span></p>
+    </div>
+    <div class="calc">
+      <form id="calc-form" autocomplete="off">
+        <div>
+          <label for="f-load"><span class="tc">01 埋設位置及載重</span><span class="en">01 Location and load</span><span class="ko">01 매설 위치와 하중</span></label>
+          <select id="f-load">
+            <option value="road" data-tc="HS20-44 (MS18) — 一般道路" data-en="HS20-44 (MS18) — local roads" data-ko="HS20-44 (MS18) — 일반도로">HS20-44 (MS18) — 一般道路</option>
+            <option value="road125" selected data-tc="1.25 × HS20-44 — 省道 · 國道" data-en="1.25 × HS20-44 — provincial roads, freeways" data-ko="1.25 × HS20-44 — 성도·국도">1.25 × HS20-44 — 省道 · 國道</option>
+            <option value="rail" data-tc="Cooper E80 — 鐵路（含臺鐵 KS-18）" data-en="Cooper E80 — railway (incl. TRA KS-18)" data-ko="Cooper E80 — 철도 (대만철도 KS-18 포함)">Cooper E80 — 鐵路（含臺鐵 KS-18）</option>
+          </select>
+        </div>
+        <div><label for="f-d"><span class="tc">02 管徑</span><span class="en">02 Diameter</span><span class="ko">02 관경</span></label><select id="f-d"></select></div>
+        <div><span class="lbl"><span class="tc">板厚</span><span class="en">Wall thickness</span><span class="ko">두께</span></span>
+          <div class="seg" role="group" aria-label="t"><button type="button" id="f-t16" data-t="1.6" aria-pressed="false">t = 1.6</button><button type="button" id="f-t20" data-t="2.0" aria-pressed="true">t = 2.0</button></div></div>
+        <div><label for="f-h"><span class="tc">03 設計覆土 H (m)</span><span class="en">03 Design cover H (m)</span><span class="ko">03 설계 토피 H (m)</span></label>
+          <div class="rangebox"><input id="f-hr" type="range" min="0" max="10" step="0.1" value="1.5" aria-label="H"><input id="f-h" type="number" min="0" max="150" step="0.1" value="1.5" inputmode="decimal"></div></div>
+        <p class="note"><span class="tc">公路覆土自鋪面底層起算，鐵路自枕木底面起算。超過 10 m 請直接輸入數值。</span><span class="en">Road cover from the bottom of pavement; rail cover from the underside of sleepers. Type values above 10 m.</span><span class="ko">도로 토피는 포장 하면부터, 철도는 침목 하면부터 잽니다. 10 m를 넘으면 숫자로 직접 입력하세요.</span></p>
+      </form>
+      <div class="out" aria-live="polite">
+        <div class="verdict ok" id="verdict"><span class="dot"></span><div><span id="v-main"></span><small id="v-sub"></small></div></div>
+        <div class="section-svg"><svg id="burial" viewBox="0 0 640 380" role="img" aria-label="埋設斷面示意圖"></svg></div>
+        <div class="kv">
+          <div><span><span class="tc">最小覆土</span><span class="en">Min. cover</span><span class="ko">최소 토피</span></span><b id="o-min"></b></div>
+          <div><span><span class="tc">最大填土高度</span><span class="en">Max. fill</span><span class="ko">최대 성토고</span></span><b id="o-max"></b></div>
+          <div><span><span class="tc">管體重量</span><span class="en">Pipe weight</span><span class="ko">관체 중량</span></span><b id="o-w"></b></div>
+          <div><span><span class="tc">5% 變形外壓強度</span><span class="en">5% deflection load</span><span class="ko">5% 변형 외압강도</span></span><b id="o-s"></b></div>
+        </div>
+        <p class="note"><span class="tc">標準條件下之參考值（良質粒料回填、壓實度 90% 以上）。特殊載重、偏壓、軟弱地盤等條件，請洽本公司另行結構計算。</span><span class="en">Reference values for standard conditions (granular backfill, ≥ 90% compaction). Ask us for a separate calculation for special loads, eccentric pressure or soft ground.</span><span class="ko">표준 조건(양질 입상재 되메움, 다짐도 90% 이상)의 참고값입니다. 특수하중·편토압·연약지반 등은 당사에 별도 구조계산을 요청하세요.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="soft" id="loads">
+  <div class="wrap">
+    <div class="head-row"><div><span class="eyebrow"><span class="tc">覆土深度示意</span><span class="en">Design loads</span><span class="ko">토피 깊이 개념도</span></span><h2 class="h2"><span class="tc">公路設計卡車與鐵路設計列車</span><span class="en">Highway design truck and rail design train</span><span class="ko">도로 설계트럭과 철도 설계열차</span></h2></div>
+    <p class="lead"><span class="tc">公路：HS20-44 (MS18) 半聯結車，軸重 3,650 / 14,600 / 14,600 kgf，省道 · 國道取 1.25 倍。鐵路：Cooper E80，動輪軸重 36.3 tf × 4，軸距 1.52 m。</span><span class="en">Highway: HS20-44 (MS18) semi-trailer, axle loads 3,650 / 14,600 / 14,600 kgf, ×1.25 for provincial roads and freeways. Rail: Cooper E80, 36.3 tf × 4 driving axles at 1.52 m.</span><span class="ko">도로: HS20-44(MS18) 세미트레일러, 축하중 3,650 / 14,600 / 14,600 kgf, 성도·국도는 1.25배. 철도: Cooper E80, 동륜 축하중 36.3 tf × 4, 축간 1.52 m.</span></p></div>
+    <div class="cols2">
+      <figure style="margin:0;background:#fff;border:1px solid var(--line)"><img src="assets/load-road.jpg" alt="公路設計卡車 HS20-44 軸重及覆土深度示意" width="1331" height="720" loading="lazy"></figure>
+      <figure style="margin:0;background:#fff;border:1px solid var(--line)"><img src="assets/load-rail.jpg" alt="鐵路設計列車 Cooper E80 軸重及覆土深度示意" width="1331" height="523" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<section id="table">
+  <div class="wrap">
+    <div class="head-row"><div><span class="eyebrow"><span class="tc">管徑別適用範圍</span><span class="en">Cover table</span><span class="ko">관경별 적용범위</span></span><h2 class="h2"><span class="tc">覆土深度及管體性能表</span><span class="en">Cover depth and pipe performance</span><span class="ko">토피 깊이 및 관체 성능표</span></h2></div>
+    <p class="lead"><span class="tc">所選管徑以底色標示。</span><span class="en">The selected diameter is highlighted.</span><span class="ko">선택한 관경은 배경색으로 표시됩니다.</span></p></div>
+    <div class="tbl">
+      <table class="cover" id="coverTable">
+        <thead>
+          <tr><th rowspan="2"><span class="tc">管徑</span><span class="en">Dia.</span><span class="ko">관경</span> (mm)</th><th colspan="2" class="l"><span class="tc">最小覆土</span><span class="en">Min. cover</span><span class="ko">최소 토피</span> (m)</th><th colspan="3" class="g">t = 1.6 mm</th><th colspan="3" class="g">t = 2.0 mm</th></tr>
+          <tr><th class="l"><span class="tc">公路</span><span class="en">Road</span><span class="ko">도로</span></th><th><span class="tc">鐵路</span><span class="en">Rail</span><span class="ko">철도</span></th><th class="l"><span class="tc">最大填土高度</span><span class="en">Max. fill</span><span class="ko">최대 성토고</span> (m)</th><th><span class="tc">管體重量</span><span class="en">Weight</span><span class="ko">관체 중량</span> (kg/m)</th><th><span class="tc">5% 變形外壓強度</span><span class="en">5% defl. load</span><span class="ko">5% 변형 외압강도</span> (kg/m²)</th><th class="l"><span class="tc">最大填土高度</span><span class="en">Max. fill</span><span class="ko">최대 성토고</span> (m)</th><th><span class="tc">管體重量</span><span class="en">Weight</span><span class="ko">관체 중량</span> (kg/m)</th><th><span class="tc">5% 變形外壓強度</span><span class="en">5% defl. load</span><span class="ko">5% 변형 외압강도</span> (kg/m²)</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <p class="note" style="margin-top:12px"><span class="tc">※ 最大填土高度超過 100 m 者以「100 以上」表示。※ 管體重量含鍍鋅層 Z27 (275 g/m²)，不含接頭套管。※ 5% 變形外壓強度：管徑發生 5% 變形時之外壓（Iowa 公式，壓實度 90% 粒料回填）。</span><span class="en">※ Fill heights above 100 m are shown as "100+". ※ Weight includes Z27 (275 g/m²) zinc, excluding sleeves. ※ 5% deflection load: external pressure at 5% diameter change (Iowa formula, granular backfill at 90%).</span><span class="ko">※ 최대성토고 100 m 초과는 「100 이상」으로 표시. ※ 관체 중량은 아연도금 Z27(275 g/m²) 포함, 슬리브 제외. ※ 5% 변형 외압강도: 관경이 5% 변형될 때의 외압 (Iowa 공식, 다짐도 90% 입상재 되메움).</span></p>
+  </div>
+</section>
+
+<section class="soft" id="basis">
+  <div class="wrap cols2">
+    <div>
+      <span class="eyebrow"><span class="tc">設計條件</span><span class="en">Design basis</span><span class="ko">설계 조건</span></span>
+      <h2 class="h2" style="margin-bottom:24px"><span class="tc">計算依據</span><span class="en">Calculation basis</span><span class="ko">계산 근거</span></h2>
+      <table class="sheet" style="margin-top:0">
+        <tr><th><span class="tc">設計規範</span><span class="en">Code</span><span class="ko">설계 기준</span></th><td>ASTM A796 / AASHTO</td></tr>
+        <tr><th><span class="tc">公路載重</span><span class="en">Highway</span><span class="ko">도로 하중</span></th><td><span class="tc">HS20-44 (MS18) 一般道路；1.25 × HS20-44 省道 · 市區重要道路 · 國道</span><span class="en">HS20-44 (MS18) local roads; 1.25 × HS20-44 provincial, major urban roads, freeways</span><span class="ko">HS20-44(MS18) 일반도로; 1.25 × HS20-44 성도·시내 주요도로·국도</span></td></tr>
+        <tr><th><span class="tc">鐵路載重</span><span class="en">Railway</span><span class="ko">철도 하중</span></th><td><span class="tc">Cooper E80（動輪軸重 36.3 tf，含衝擊）</span><span class="en">Cooper E80 (36.3 tf axle, impact incl.)</span><span class="ko">Cooper E80 (동륜 축하중 36.3 tf, 충격 포함)</span></td></tr>
+        <tr><th><span class="tc">衝擊係數</span><span class="en">Impact</span><span class="ko">충격계수</span></th><td>0–0.3 m 30% · 0.3–0.6 m 20% · 0.6–0.9 m 10% · ≥ 0.9 m 0%</td></tr>
+        <tr><th><span class="tc">土壤單位重</span><span class="en">Soil weight</span><span class="ko">흙 단위중량</span></th><td>1,920 kgf/m³</td></tr>
+        <tr><th><span class="tc">安全係數</span><span class="en">Safety factor</span><span class="ko">안전율</span></th><td><span class="tc">管壁及挫屈 SF = 2.0；H ≥ D 時 K = 0.75</span><span class="en">Wall and buckling SF = 2.0; K = 0.75 when H ≥ D</span><span class="ko">관벽·좌굴 SF = 2.0; H ≥ D일 때 K = 0.75</span></td></tr>
+        <tr><th><span class="tc">撓性係數</span><span class="en">Flexibility</span><span class="ko">연성계수</span></th><td><span class="tc">FF ≤ 0.245 mm/N（全管徑滿足）</span><span class="en">FF ≤ 0.245 mm/N (all diameters)</span><span class="ko">FF ≤ 0.245 mm/N (전 관경 만족)</span></td></tr>
+      </table>
+    </div>
+    <div>
+      <span class="eyebrow"><span class="tc">施工注意事項</span><span class="en">Site notes</span><span class="ko">시공 유의사항</span></span>
+      <h2 class="h2" style="margin-bottom:24px"><span class="tc">使用本表時</span><span class="en">When using the table</span><span class="ko">이 표를 쓸 때</span></h2>
+      <ol>
+        <li><span class="tc">公路最小覆土自鋪面底層起算 0.3 m 以上，鐵路自枕木底面起算 0.6 m 以上；施工中重型機具通過時，應另行確保臨時覆土。</span><span class="en">Minimum cover: 0.3 m below pavement (road), 0.6 m below sleepers (rail). Provide temporary cover where heavy plant crosses during construction.</span><span class="ko">도로 최소토피는 포장 하면부터 0.3 m 이상, 철도는 침목 하면부터 0.6 m 이상. 시공 중 중장비가 지나갈 때는 임시 토피를 따로 확보하세요.</span></li>
+        <li><span class="tc">回填材料應為良質粒料，管側兩側均勻分層壓實，壓實度 AASHTO T99 90% 以上。</span><span class="en">Use good granular backfill, compacted evenly on both sides in layers to ≥ 90% (AASHTO T99).</span><span class="ko">되메움재는 양질 입상재로, 관 양측을 고르게 층다짐해 다짐도 AASHTO T99 90% 이상.</span></li>
+        <li><span class="tc">本表為標準條件下之參考值，特殊載重 · 偏壓 · 軟弱地盤等條件應另行結構計算。</span><span class="en">Reference values for standard conditions; special loads, eccentric pressure or soft ground need a separate calculation.</span><span class="ko">이 표는 표준 조건의 참고값이며, 특수하중·편토압·연약지반 등은 별도 구조계산이 필요합니다.</span></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section id="standards">
+  <div class="wrap">
+    <div class="head-row"><div><span class="eyebrow"><span class="tc">規範對照</span><span class="en">Standards</span><span class="ko">규범 대조</span></span><h2 class="h2"><span class="tc">設計單位參考</span><span class="en">For design offices</span><span class="ko">설계사 참고</span></h2></div>
+    <p class="lead"><span class="tc">本公司產品與計算所依據之規範一覽，供公共工程設計及審查參考。</span><span class="en">The standards behind our products and calculations, for public-works design and review.</span><span class="ko">당사 제품과 계산의 근거 기준 목록으로, 공공공사 설계·심사 참고용입니다.</span></p></div>
+    <div class="std-wrap">
+      <table class="std">
+        <thead><tr><th><span class="tc">項目</span><span class="en">Item</span><span class="ko">항목</span></th><th><span class="tc">規範</span><span class="en">Standard</span><span class="ko">기준</span></th><th><span class="tc">內容</span><span class="en">Scope</span><span class="ko">내용</span></th></tr></thead>
+        <tbody>
+          <tr><td><span class="tc">產品規格</span><span class="en">Product</span><span class="ko">제품 규격</span></td><td class="code">CNS 6920 <span class="tc">附錄 B</span><span class="en">Annex B</span><span class="ko">부록 B</span></td><td><span class="tc">螺旋波形鋼管種類、斷面尺寸與容許誤差</span><span class="en">Helical corrugated pipe types, profile dimensions and tolerances</span><span class="ko">나선형 파형강관 종류, 단면 치수와 허용오차</span></td></tr>
+          <tr><td><span class="tc">原物料</span><span class="en">Base steel</span><span class="ko">원자재</span></td><td class="code">CNS 1244 · CNS 16166</td><td><span class="tc">熱浸鍍鋅鋼片及鋼捲；熱浸鍍鋅鋁鎂合金鋼片及鋼捲</span><span class="en">Hot-dip galvanized sheet and coil; hot-dip Zn-Al-Mg coated sheet and coil</span><span class="ko">용융아연도금 강판·코일; 용융 아연·알루미늄·마그네슘 합금도금 강판·코일</span></td></tr>
+          <tr><td><span class="tc">結構設計</span><span class="en">Structural design</span><span class="ko">구조설계</span></td><td class="code">ASTM A796 · AASHTO</td><td><span class="tc">管壁環向壓力、挫屈、撓性係數</span><span class="en">Ring compression, buckling, flexibility factor</span><span class="ko">관벽 링압축, 좌굴, 연성계수</span></td></tr>
+          <tr><td><span class="tc">公路載重</span><span class="en">Highway load</span><span class="ko">도로 하중</span></td><td class="code"><span class="tc">公路橋梁設計規範</span><span class="en">Taiwan Highway Bridge Code</span><span class="ko">도로교량설계규범</span></td><td><span class="tc">第 3 章設計卡車 HS20-44 (MS18)；3.13 衝擊；3.3 土壤單位重</span><span class="en">Ch. 3 design truck HS20-44 (MS18); 3.13 impact; 3.3 soil unit weight</span><span class="ko">제3장 설계트럭 HS20-44(MS18); 3.13 충격; 3.3 흙 단위중량</span></td></tr>
+          <tr><td><span class="tc">鐵路載重</span><span class="en">Rail load</span><span class="ko">철도 하중</span></td><td class="code">Cooper E80 · AREMA</td><td><span class="tc">涵蓋臺鐵 KS-18（軸重 18 tf）</span><span class="en">Covers TRA KS-18 (18 tf axle)</span><span class="ko">대만철도 KS-18 (축하중 18 tf) 포함</span></td></tr>
+          <tr><td><span class="tc">壓實度</span><span class="en">Compaction</span><span class="ko">다짐도</span></td><td class="code">AASHTO T99</td><td><span class="tc">回填壓實度 90% 以上</span><span class="en">Backfill compaction ≥ 90%</span><span class="ko">되메움 다짐도 90% 이상</span></td></tr>
+          <tr><td><span class="tc">變形</span><span class="en">Deflection</span><span class="ko">변형</span></td><td class="code">Iowa</td><td><span class="tc">5% 變形外壓強度</span><span class="en">External load at 5% deflection</span><span class="ko">5% 변형 외압강도</span></td></tr>
+          <tr><td><span class="tc">品質系統</span><span class="en">Quality</span><span class="ko">품질 시스템</span></td><td class="code">ISO 9001:2015</td><td>REXSTEEL Inc.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="dark" id="software">
+  <div class="wrap">
+    <div class="software">
+      <img src="assets/icon.png" alt="REX-CSP" width="180" height="180">
+      <div>
+        <span class="eyebrow"><span class="tc">結構計算程式</span><span class="en">Structural software</span><span class="ko">구조계산 프로그램</span></span>
+        <h3 style="margin-top:12px">REX-CSP v1.0</h3>
+        <p class="muted" style="margin-top:10px;max-width:46em"><span class="tc">REXSTEEL 自行開發之埋設式螺旋波形鋼管 (0RS · 1RS · 3RS) 結構檢核程式。依 ASTM A796 · AASHTO 及台灣設計載重計算，直接輸出可提交業主及設計單位之結構計算書。</span><span class="en">REXSTEEL's in-house checking program for buried helical pipe (0RS · 1RS · 3RS) to ASTM A796 / AASHTO with Taiwan design loads, producing reports ready for owners and designers.</span><span class="ko">REXSTEEL이 자체 개발한 매설 나선형 파형강관(0RS·1RS·3RS) 구조검토 프로그램입니다. ASTM A796·AASHTO와 대만 설계하중으로 계산하고, 발주처와 설계사에 제출할 구조계산서를 바로 출력합니다.</span></p>
+        <ul>
+          <li><span class="tc">管壁環向壓力、挫屈、撓性係數、最小覆土、撓度檢核</span><span class="en">Ring compression, buckling, flexibility, minimum cover and deflection</span><span class="ko">관벽 링압축, 좌굴, 연성계수, 최소토피, 처짐 검토</span></li>
+          <li><span class="tc">全管徑 · 板厚之適用範圍表，可輸出 Excel</span><span class="en">Cover tables for all diameters and thicknesses, Excel export</span><span class="ko">전 관경·두께 적용범위표, Excel 출력</span></li>
+          <li><span class="tc">Word 計算書（繁體中文 / 韓文）</span><span class="en">Word reports (Traditional Chinese / Korean)</span><span class="ko">Word 계산서 (번체 중국어 / 한국어)</span></li>
+        </ul>
+        <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:24px">
+          <a class="btn btn-red" href="contact.html"><span class="tc">申請專案計算書</span><span class="en">Request a project report</span><span class="ko">프로젝트 계산서 요청</span> <span class="arr">→</span></a>
+          <a class="btn btn-line" href="contact.html#downloads"><span class="tc">使用手冊</span><span class="en">User manual</span><span class="ko">사용설명서</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="ftr">
+<div class="wrap">
+  <div><div class="co">雷克斯波形鋼鐵股份有限公司</div><div style="margin-top:4px">REXSTEEL Co., Ltd. (Taiwan)</div>
+  <p style="margin-top:14px;max-width:30em"><span class="tc">浚利鋼鐵材料股份有限公司 × REXSTEEL Inc.（大韓鋼管集團）各出資 50% 合資成立之波形鋼管專業製造公司。</span><span class="en">A 50:50 corrugated steel pipe joint venture of Jiun-Li Steel Material Co., Ltd. and REXSTEEL Inc. (Daehan Steel Pipe Group).</span><span class="ko">浚利鋼鐵(준리강철) × REXSTEEL Inc.(대한강관그룹)가 50%씩 출자해 세운 파형강관 전문 제조회사입니다.</span></p></div>
+  <div><h4><span class="tc">產品</span><span class="en">Products</span><span class="ko">제품</span></h4><ul><li><a href="products.html#ors">0RS <span class="tc">波形鋼管</span><span class="en">pipe</span><span class="ko">파형강관</span></a></li><li><a href="products.html#perforated"><span class="tc">穿孔波形鋼管</span><span class="en">Perforated pipe</span><span class="ko">유공관</span></a></li><li><a href="products.html#pe"><span class="tc">PE 包覆波形鋼管</span><span class="en">PE-coated pipe</span><span class="ko">PE 피복 파형강관</span></a></li><li><a href="products.html#pe-perforated"><span class="tc">PE 包覆穿孔管</span><span class="en">PE perforated pipe</span><span class="ko">PE 피복 유공관</span></a></li><li><a href="plate.html"><span class="tc">波形鋼板</span><span class="en">Corrugated plate</span><span class="ko">파형강판</span></a></li></ul></div>
+  <div><h4><span class="tc">技術</span><span class="en">Technical</span><span class="ko">기술</span></h4><ul><li><a href="engineering.html#corra">CORRA</a></li><li><a href="technical.html#calc"><span class="tc">覆土深度查詢</span><span class="en">Cover depth check</span><span class="ko">토피 깊이 조회</span></a></li><li><a href="technical.html#standards"><span class="tc">規範對照</span><span class="en">Standards</span><span class="ko">규범 대조</span></a></li><li><a href="installation.html"><span class="tc">施工</span><span class="en">Installation</span><span class="ko">시공</span></a></li><li><a href="has.html"><span class="tc">機堡 HAS · Wonder Arch</span><span class="en">HAS shelters · Wonder Arch</span><span class="ko">격납고 HAS · Wonder Arch</span></a></li><li><a href="contact.html#downloads"><span class="tc">下載</span><span class="en">Downloads</span><span class="ko">다운로드</span></a></li></ul></div>
+  <div><h4><span class="tc">聯絡</span><span class="en">Contact</span><span class="ko">연락처</span></h4><ul><li>雲林縣斗南鎮田頭里義和二路39巷2號</li><li>統一編號 62049014</li><li>service@rexsteel.com.tw</li><li>www.rexsteel.com.tw</li></ul></div>
+</div>
+<div class="bottom"><div class="wrap"><span>© 2026 REXSTEEL Co., Ltd. (Taiwan)</span><span>CNS 6920 · ASTM A796 · AASHTO</span></div></div>
+</footer>
+<script src="site.js"></script>
+</body>
+</html>
