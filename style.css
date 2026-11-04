@@ -504,3 +504,6 @@ html[lang="ko"] .lead,html[lang="ko"] .hero p{line-height:1.75}
 .hero h1 .tc,.hero h1 .ko{word-break:keep-all}
 
 @media (min-width:1081px) and (max-width:1240px){.menu a{padding:10px 8px;font-size:14.5px}.hdr .wrap{gap:12px}}
+
+.wa-gal2.three{grid-template-columns:repeat(3,minmax(0,1fr))}.wa-gal2.three img{aspect-ratio:16/9}
+@media (max-width:860px){.wa-gal2.three{grid-template-columns:1fr}}
