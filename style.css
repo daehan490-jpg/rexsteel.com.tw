@@ -49,7 +49,7 @@ html:not([lang="en"]):not([lang="ko"]) .en,html:not([lang="en"]):not([lang="ko"]
 .lang button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
 .burger{display:none;margin-left:auto;background:none;border:1px solid var(--line);border-radius:6px;width:42px;height:38px;cursor:pointer;color:var(--ink)}
 .burger span{display:block;width:18px;height:2px;background:currentColor;margin:4px auto}
-@media (max-width:960px){
+@media (max-width:1080px){
   .burger{display:block}
   .menu{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;background:var(--bg);border-bottom:1px solid var(--line);padding:8px max(20px,env(safe-area-inset-right,0px)) 16px max(20px,env(safe-area-inset-left,0px))}
   .menu.open{display:flex}
@@ -502,3 +502,5 @@ html[lang="ko"] .lead,html[lang="ko"] .hero p{line-height:1.75}
 .subnav a{padding:15px 16px}
 .menu a{padding:10px 12px}
 .hero h1 .tc,.hero h1 .ko{word-break:keep-all}
+
+@media (min-width:1081px) and (max-width:1240px){.menu a{padding:10px 8px;font-size:14.5px}.hdr .wrap{gap:12px}}
