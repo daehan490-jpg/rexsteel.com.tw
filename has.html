@@ -335,6 +335,66 @@
   <div><h2><span class="tc">準備保護您的空中資產？</span><span class="en">Ready to protect your air assets?</span><span class="ko">공중 자산을 보호할 준비가 되셨습니까?</span></h2><p><span class="tc">來信即可取得 NDA 技術資料包與供應範圍文件。</span><span class="en">Write to us for the NDA technical package and scope-of-supply document.</span><span class="ko">메일 주시면 NDA 기술자료와 공급범위 문서를 보내 드립니다.</span></p></div>
   <a class="btn" href="contact.html#has"><span class="tc">索取 NDA 技術資料包</span><span class="en">Request NDA package</span><span class="ko">NDA 기술자료 요청</span> <span class="arr">→</span></a>
 </div></div>
+<!-- HAS film popup (2026-11-07, HAS page, EN+TC) — remove this block to disable -->
+<style>
+.rxpop{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;padding:16px;background:rgba(8,10,12,.78);backdrop-filter:blur(3px)}
+.rxpop.on{display:flex}
+.rxpop-box{position:relative;width:min(800px,100%,calc((85vh - 120px) * 16 / 9));background:#111417;border:1px solid #2f363c;border-radius:10px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.5);color:#eef0f2}
+.rxpop-hd{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 16px;border-bottom:1px solid #2f363c}
+.rxpop-hd b{font:700 16px/1.3 var(--f-head)}
+.rxpop-hd b em{font-style:normal;color:#ff5068}
+.rxpop-x{flex:none;width:36px;height:36px;border:0;border-radius:50%;background:#20252a;color:#eef0f2;font-size:22px;line-height:36px;cursor:pointer}
+.rxpop-x:hover{background:#c70026}
+.rxpop-v{position:relative;aspect-ratio:16/9;background:#000}
+.rxpop-v video{display:block;width:100%;height:100%}
+.rxpop-snd{position:absolute;left:12px;bottom:12px;border:1px solid rgba(255,255,255,.5);border-radius:999px;background:rgba(0,0,0,.55);color:#fff;font:600 14px/1 var(--f-head);padding:9px 14px;cursor:pointer}
+.rxpop-ft{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;padding:12px 16px;font-size:14px}
+.rxpop-ft label{display:flex;align-items:center;gap:8px;color:#a3abb3;cursor:pointer}
+.rxpop-ft a{color:#fff;background:#c70026;border-radius:6px;padding:8px 14px;text-decoration:none;font-weight:600}
+.rxpop-ft a:hover{background:#9e001e}
+@media (max-width:600px){.rxpop-hd b{font-size:14px}.rxpop-ft{font-size:13px}}
+</style>
+<div class="rxpop" id="rxpop" role="dialog" aria-modal="true" aria-labelledby="rxpop-t">
+  <div class="rxpop-box">
+    <div class="rxpop-hd">
+      <b id="rxpop-t"><span class="tc">Wonder Arch <em>機堡</em> 防護 — 從襯板到整體機堡設計</span><span class="en">Wonder Arch <em>HAS</em> — from liner to full shelter design</span><span class="ko">Wonder Arch <em>격납고</em> — 라이너부터 격납고 설계까지</span></b>
+      <button class="rxpop-x" type="button" aria-label="Close">×</button>
+    </div>
+    <div class="rxpop-v">
+      <video id="rxpop-video" muted playsinline loop preload="metadata" poster="assets/has-film-poster.jpg"></video>
+      <button class="rxpop-snd" type="button"><span class="tc">🔊 開啟聲音</span><span class="en">🔊 Sound on</span><span class="ko">🔊 소리 켜기</span></button>
+    </div>
+    <div class="rxpop-ft">
+      <label><input type="checkbox" id="rxpop-today"> <span class="tc">今日不再顯示</span><span class="en">Don't show again today</span><span class="ko">오늘 하루 보지 않기</span></label>
+      <a href="contact.html"><span class="tc">洽詢 · 聯絡我們</span><span class="en">Enquiries · Contact</span><span class="ko">문의 · 연락처</span> →</a>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var KEY='rx-hasfilm-hide', pop=document.getElementById('rxpop'), v=document.getElementById('rxpop-video');
+  if(!pop||!v) return;
+  var today=new Date().toISOString().slice(0,10);
+  try{ if(localStorage.getItem(KEY)===today) return; }catch(e){}
+  function curLang(){ try{ return (window.RX&&RX.lang())||document.documentElement.lang; }catch(e){ return document.documentElement.lang; } }
+  function src(){ return 'assets/has-film-tc-720.mp4'; }
+  function load(){ var s=src(); if(v.getAttribute('src')!==s){ var t=v.currentTime||0; v.setAttribute('src',s); v.load(); if(pop.classList.contains('on')){ v.currentTime=t; v.play().catch(function(){}); } } }
+  function open(){ load(); pop.classList.add('on'); v.play().catch(function(){}); }
+  function close(){
+    pop.classList.remove('on'); v.pause();
+    try{ if(document.getElementById('rxpop-today').checked) localStorage.setItem(KEY,today); }catch(e){}
+  }
+  pop.querySelector('.rxpop-x').addEventListener('click',close);
+  pop.addEventListener('click',function(e){ if(e.target===pop) close(); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&pop.classList.contains('on')) close(); });
+  var snd=pop.querySelector('.rxpop-snd');
+  snd.addEventListener('click',function(){ v.muted=!v.muted; if(!v.muted) v.play().catch(function(){}); snd.style.display=v.muted?'':'none'; });
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',function(){ setTimeout(open,600); });
+  else setTimeout(open,600);
+})();
+</script>
+<!-- /HAS film popup -->
+
 
 </main>
 <footer class="ftr">
