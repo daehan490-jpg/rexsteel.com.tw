@@ -4,3 +4,5 @@
 .rx-import img{max-width:100%;max-height:480px;object-fit:contain}.rx-import figure img{height:240px}.rx-import li{margin:8px 0}.rx-import .rx-local-content h2{font-size:clamp(26px,3vw,40px)}
 
 .rx-app-link{display:block;text-decoration:none;color:inherit}.rx-app-link .app{height:100%}.rx-app-link:focus-visible{outline:3px solid var(--red);outline-offset:4px}#taiwan-projects figure{cursor:zoom-in}#taiwan-projects{scroll-margin-top:150px}
+
+.rx-jv-priority{padding:38px 0!important;border-bottom:1px solid var(--line)}.rx-contact-split{display:grid;grid-template-columns:1.5fr 1fr;gap:32px;align-items:center}.rx-jv-priority h2{font-size:28px;margin:8px 0}.rx-contact-mail{font-size:clamp(18px,2.5vw,25px);font-weight:700;overflow-wrap:anywhere;margin-bottom:16px;user-select:all}.rx-routing{padding:32px 0!important;background:var(--bg-2)}.rx-routing h2{font-size:25px}#pipe,#korea-contact,#korea-plate,#korea-has{scroll-margin-top:150px}@media(max-width:700px){.rx-contact-split{grid-template-columns:1fr}}
