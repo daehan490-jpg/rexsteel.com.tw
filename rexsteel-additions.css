@@ -14,3 +14,5 @@
 .hdr .rx-korea-logo{display:flex;align-items:center;flex:none;padding:5px 0 5px 10px;border-left:1px solid var(--line);margin-left:-14px}.hdr .rx-korea-logo img{width:106px;height:auto;max-height:28px}.hdr .rx-korea-logo:hover{opacity:.75}.hdr .wrap{gap:18px}@media(max-width:1200px){.hdr .rx-korea-logo img{width:88px}.hdr .wrap{gap:12px}.hdr .rx-korea-logo{margin-left:0;padding-left:8px}}@media(max-width:560px){.hdr .brand img{height:27px}.hdr .rx-korea-logo img{width:76px}.hdr .lang button{padding:8px}.hdr .wrap{gap:9px}}
 
 .hdr .rx-korea-logo{flex-direction:column;gap:3px;justify-content:center;text-decoration:none;color:var(--ink)}.rx-korea-label{font-size:10px;font-weight:700;line-height:1.25;white-space:nowrap}.hdr .rx-korea-logo img{width:96px}@media(max-width:560px){.rx-korea-label{font-size:9px}.hdr .rx-korea-logo img{width:72px}}
+
+#liners .rx-profile-red{color:var(--red);font-weight:900}
