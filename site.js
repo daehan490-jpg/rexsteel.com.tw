@@ -63,8 +63,7 @@
 (function(){
   var D=[150,200,250,300,350,400,450,500,600];
   var T={
-    "1.6":{h:[null,null,98.8,82.3,70.6,61.7,54.9,49.4,41.1],w:[6.4,8.6,10.7,12.9,15.0,17.2,19.3,21.5,25.7],s:[218330,104510,63980,46070,36960,31840,28750,26780,24540]},
-    "2.0":{h:[null,null,null,null,88.2,77.2,68.6,61.7,51.4],w:[8.0,10.7,13.4,16.0,18.7,21.4,24.0,26.7,32.0],s:[274420,128180,76100,53080,41370,34800,30830,28290,25410]}
+    "1.6":{h:[null,null,98.8,82.3,70.6,61.7,54.9,49.4,41.1],w:[6.4,8.6,10.7,12.9,15.0,17.2,19.3,21.5,25.7],s:[218330,104510,63980,46070,36960,31840,28750,26780,24540]}
   };
   var MINC={road:0.3,road125:0.3,rail:0.6};
   function fmt(n){return n.toLocaleString('en-US')}
@@ -73,7 +72,7 @@
     var L=RX.L, fD=document.getElementById('f-d'), fL=document.getElementById('f-load'), fH=document.getElementById('f-h'), fR=document.getElementById('f-hr');
     var tb=document.querySelector('#coverTable tbody'), svg=document.getElementById('burial');
     fD.innerHTML=D.map(function(d){return '<option value="'+d+'"'+(d===400?' selected':'')+'>Ø'+d+' mm</option>'}).join('');
-    var t="2.0";
+    var t="1.6";
     form.querySelectorAll('.seg button').forEach(function(b){b.addEventListener('click',function(){
       t=b.dataset.t; form.querySelectorAll('.seg button').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))}); run();
     })});
@@ -84,9 +83,9 @@
     function hT(v){return v===null?L('100 以上','100+','100 이상'):v.toFixed(1)}
 
     function table(sel){
-      var a=T["1.6"],b=T["2.0"];
+      var a=T["1.6"];
       tb.innerHTML=D.map(function(d,i){
-        return '<tr'+(d===sel?' class="sel"':'')+'><td>Ø'+d+'</td><td class="l">0.3</td><td>0.6</td><td class="l h">'+hT(a.h[i])+'</td><td>'+a.w[i].toFixed(1)+'</td><td>'+fmt(a.s[i])+'</td><td class="l h">'+hT(b.h[i])+'</td><td>'+b.w[i].toFixed(1)+'</td><td>'+fmt(b.s[i])+'</td></tr>';
+        return '<tr'+(d===sel?' class="sel"':'')+'><td>Ø'+d+'</td><td class="l">0.3</td><td>0.6</td><td class="l h">'+hT(a.h[i])+'</td><td>'+a.w[i].toFixed(1)+'</td><td>'+fmt(a.s[i])+'</td></tr>';
       }).join('');
     }
 

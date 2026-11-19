@@ -49,7 +49,7 @@
 </div>
 <div><label for="f-d"><span class="tc">02 管徑</span><span class="en">02 Diameter</span><span class="ko">02 관경</span></label><select id="f-d"></select></div>
 <div><span class="lbl"><span class="tc">板厚</span><span class="en">Wall thickness</span><span class="ko">두께</span></span>
-<div aria-label="t" class="seg" role="group"><button aria-pressed="false" data-t="1.6" id="f-t16" type="button">t = 1.6</button><button aria-pressed="true" data-t="2.0" id="f-t20" type="button">t = 2.0</button></div></div>
+<div aria-label="t" class="seg" role="group"><button aria-pressed="true" data-t="1.6" id="f-t16" type="button">t = 1.6</button></div></div>
 <div><label for="f-h"><span class="tc">03 設計覆土 H (m)</span><span class="en">03 Design cover H (m)</span><span class="ko">03 설계 토피 H (m)</span></label>
 <div class="rangebox"><input aria-label="H" id="f-hr" max="10" min="0" step="0.1" type="range" value="1.5"/><input id="f-h" inputmode="decimal" max="150" min="0" step="0.1" type="number" value="1.5"/></div></div>
 <p class="note"><span class="tc">公路覆土自鋪面底層起算，鐵路自枕木底面起算。超過 10 m 請直接輸入數值。</span><span class="en">Road cover from the bottom of pavement; rail cover from the underside of sleepers. Type values above 10 m.</span><span class="ko">도로 토피는 포장 하면부터, 철도는 침목 하면부터 잽니다. 10 m를 넘으면 숫자로 직접 입력하세요.</span></p>
@@ -85,8 +85,8 @@
 <div class="tbl">
 <table class="cover" id="coverTable">
 <thead>
-<tr><th rowspan="2"><span class="tc">管徑</span><span class="en">Dia.</span><span class="ko">관경</span> (mm)</th><th class="l" colspan="2"><span class="tc">最小覆土</span><span class="en">Min. cover</span><span class="ko">최소 토피</span> (m)</th><th class="g" colspan="3">t = 1.6 mm</th><th class="g" colspan="3">t = 2.0 mm</th></tr>
-<tr><th class="l"><span class="tc">公路</span><span class="en">Road</span><span class="ko">도로</span></th><th><span class="tc">鐵路</span><span class="en">Rail</span><span class="ko">철도</span></th><th class="l"><span class="tc">最大填土高度</span><span class="en">Max. fill</span><span class="ko">최대 성토고</span> (m)</th><th><span class="tc">管體重量</span><span class="en">Weight</span><span class="ko">관체 중량</span> (kg/m)</th><th><span class="tc">5% 變形外壓強度</span><span class="en">5% defl. load</span><span class="ko">5% 변형 외압강도</span> (kg/m²)</th><th class="l"><span class="tc">最大填土高度</span><span class="en">Max. fill</span><span class="ko">최대 성토고</span> (m)</th><th><span class="tc">管體重量</span><span class="en">Weight</span><span class="ko">관체 중량</span> (kg/m)</th><th><span class="tc">5% 變形外壓強度</span><span class="en">5% defl. load</span><span class="ko">5% 변형 외압강도</span> (kg/m²)</th></tr>
+<tr><th rowspan="2"><span class="tc">管徑</span><span class="en">Dia.</span><span class="ko">관경</span> (mm)</th><th class="l" colspan="2"><span class="tc">最小覆土</span><span class="en">Min. cover</span><span class="ko">최소 토피</span> (m)</th><th class="g" colspan="3">t = 1.6 mm</th></tr>
+<tr><th class="l"><span class="tc">公路</span><span class="en">Road</span><span class="ko">도로</span></th><th><span class="tc">鐵路</span><span class="en">Rail</span><span class="ko">철도</span></th><th class="l"><span class="tc">最大填土高度</span><span class="en">Max. fill</span><span class="ko">최대 성토고</span> (m)</th><th><span class="tc">管體重量</span><span class="en">Weight</span><span class="ko">관체 중량</span> (kg/m)</th><th><span class="tc">5% 變形外壓強度</span><span class="en">5% defl. load</span><span class="ko">5% 변형 외압강도</span> (kg/m²)</th></tr>
 </thead>
 <tbody></tbody>
 </table>
@@ -173,6 +173,6 @@
 </div>
 <div class="bottom"><div class="wrap"><span>© 2026 RexSteel Co., Ltd.</span><span>CNS 6920 · ASTM A796 · AASHTO</span></div></div>
 </footer>
-<script src="site.js"></script>
+<script src="site.js?v=20261119-16mm"></script>
 <script defer="" src="rexsteel-additions.js?v=20261117-profile-red"></script></body>
 </html>
